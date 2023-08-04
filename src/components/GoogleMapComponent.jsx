@@ -51,7 +51,7 @@ const GoogleMapComponent = () => {
               />
               
                <h3 style={{ fontSize: "14px", margin: 0 }}>ЖК ‘’Софіївський квартал’’,</h3> 
-               <p style={{ fontSize: "13px", margin: 0 }}> вул. Шалімова, 63а (підвал будинку)</p>
+               <p style={{ fontSize: "13px", margin: 0 }}> вул. Шалімова, 63а </p>
              
               
             </div>
