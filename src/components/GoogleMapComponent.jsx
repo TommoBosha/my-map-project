@@ -6,6 +6,8 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 
+
+
 const mapContainerStyle = {
   width: "500px",
   height: "402px",
@@ -50,7 +52,7 @@ const GoogleMapComponent = () => {
                 alt="entrance"
               />
               
-               <h3 style={{ fontSize: "14px", margin: 0 }}>ЖК ‘’Софіївський квартал’’,</h3> 
+               <h3 style={{ fontSize: "14px", margin: 0 }}>ЖК ‘’Софіївський квартал’’,</h3>
                <p style={{ fontSize: "13px", margin: 0 }}> вул. Шалімова, 63а </p>
              
               
@@ -69,7 +71,7 @@ const GoogleMapComponent = () => {
                 style={{ width: "200px", height: "100%" }}
                 alt="entrance"
               />
-              <h3 style={{ fontSize: "14px", margin: 0 }}>ЖК ‘’Уютний квартал’’, </h3> 
+              <h3 style={{ fontSize: "14px", margin: 0 }}>ЖК ‘’Уютний квартал’’, </h3>
                <p style={{ fontSize: "13px", margin: 0 }}> пр-т Героїв Небесної Сотні, 16/22</p>
               
             </div>
@@ -81,3 +83,5 @@ const GoogleMapComponent = () => {
 };
 
 export default GoogleMapComponent;
+
+
