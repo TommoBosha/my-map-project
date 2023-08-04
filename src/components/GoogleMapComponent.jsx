@@ -46,13 +46,13 @@ const GoogleMapComponent = () => {
             <div>
               <img
                 src="https://res.cloudinary.com/dsw7lnmcv/image/upload/v1691147447/photo_5362087646685415699_y_nkgwqu.jpg"
-                style={{ width: "120px", height: "60px" }}
+                style={{ width: "200px", height: "100%" }}
                 alt="entrance"
               />
               
-               <h3>ЖК ‘’Софіївський квартал’’,</h3> 
-               <p> вул. Шалімова, 63а (підвал будинку)</p>
-               <p> дитячий майданчик дит. садочку ‘’Мозаїка’’</p>
+               <h3 style={{ fontSize: "14px", margin: 0 }}>ЖК ‘’Софіївський квартал’’,</h3> 
+               <p style={{ fontSize: "13px", margin: 0 }}> вул. Шалімова, 63а (підвал будинку)</p>
+               <p style={{ fontSize: "13px", margin: 0 }}> дитячий майданчик дит. садочку ‘’Мозаїка’’</p>
               
             </div>
           </InfoWindow>
@@ -66,11 +66,11 @@ const GoogleMapComponent = () => {
             <div>
               <img
                 src="https://res.cloudinary.com/dsw7lnmcv/image/upload/v1691147447/photo_5359805674726479601_y_kkcwjd.jpg"
-                style={{ width: "120px", height: "60px" }}
+                style={{ width: "200px", height: "100%" }}
                 alt="entrance"
               />
-              <h3>ЖК ‘’Уютний квартал’’, </h3> 
-               <p> пр-т Героїв Небесної Сотні, 16/22</p>
+              <h3 style={{ fontSize: "14px", margin: 0 }}>ЖК ‘’Уютний квартал’’, </h3> 
+               <p style={{ fontSize: "13px", margin: 0 }}> пр-т Героїв Небесної Сотні, 16/22</p>
               
             </div>
           </InfoWindow>
