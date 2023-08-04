@@ -1,5 +1,5 @@
-import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import React, { useState } from 'react';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
 
 const mapContainerStyle = {
@@ -12,19 +12,42 @@ const center = {
   lng: 30.3396692276001, 
 };
 
-const firstOficce = { lat: 50.40755844116211, lng: 30.338287353515625 };
-const secondOffice = {lat: 50.39970397949219, lng: 30.34105110168457 }
+const firstOficce = { lat: 50.408089, lng: 30.339429 };
+const secondOffice = {lat: 50.398478, lng: 30.342186 }
 
 
 const GoogleMapComponent = () => {
 
+const [activeMarker, setActiveMarker] = useState(null);
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MAPS_API_KEY}>
       <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={14}>
-        
-        <Marker position={firstOficce} />
-        <Marker position={secondOffice} />
+  
+        <Marker position={firstOficce}  onClick={() => setActiveMarker('first')}/>
+        <Marker position={secondOffice} onClick={() => setActiveMarker('second')} />
+
+        {activeMarker === 'first' && (
+          <InfoWindow
+            position={firstOficce}
+            onCloseClick={() => setActiveMarker(null)}
+          >
+            <div>
+              <h3>Информация о первой точке</h3>
+            </div>
+          </InfoWindow>
+        )}
+
+        {activeMarker === 'second' && (
+          <InfoWindow
+            position={secondOffice}
+            onCloseClick={() => setActiveMarker(null)}
+          >
+            <div>
+              <h3>Информация о второй точке</h3>
+            </div>
+          </InfoWindow>
+        )}
         
       
       </GoogleMap>
