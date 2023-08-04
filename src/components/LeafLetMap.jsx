@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+
+import "leaflet/dist/leaflet.css";
 
 const mapContainerStyle = {
   width: "500px",
-  height: "402px",
+  height: "402px", 
 };
 
 const center = [50.40363171032715, 30.3396692276001];
@@ -17,11 +19,16 @@ const MapComponent = () => {
   return (
     <MapContainer
       center={center}
-      zoom={14}
+      zoom={15}
       style={mapContainerStyle}
+      dragging={true} 
+      tap={true} 
+      doubleClickZoom={false} 
+      zoomControl={false} 
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        noWrap={true} 
       />
 
       <Marker
