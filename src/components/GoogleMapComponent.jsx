@@ -22,7 +22,7 @@ const GoogleMapComponent = () => {
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MAPS_API_KEY}>
       <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={14}>
-        <Marker position={center} />
+        
         <Marker position={firstOficce} />
         <Marker position={secondOffice} />
         
