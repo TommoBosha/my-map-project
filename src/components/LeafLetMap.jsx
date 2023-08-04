@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
-
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import Icon from "../image/marker-icon.png";
+
+const customIcon = new L.Icon({
+  iconUrl: Icon,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+});
 
 const mapContainerStyle = {
   width: "500px",
@@ -19,7 +27,7 @@ const MapComponent = () => {
   return (
     <MapContainer
       center={center}
-      zoom={15}
+      zoom={14}
       style={mapContainerStyle}
       dragging={true} 
       tap={true} 
@@ -32,16 +40,18 @@ const MapComponent = () => {
       />
 
       <Marker
-        position={firstOffice}
-        eventHandlers={{
-          click: () => setActiveMarker("first"),
-        }}
-      />
+  position={firstOffice}
+  eventHandlers={{
+    click: () => setActiveMarker("first"),
+  }}
+  icon={customIcon}
+/>
       <Marker
         position={secondOffice}
         eventHandlers={{
           click: () => setActiveMarker("second"),
         }}
+        icon={customIcon}
       />
 
       {activeMarker === "first" && (
