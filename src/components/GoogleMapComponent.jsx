@@ -33,7 +33,11 @@ const [activeMarker, setActiveMarker] = useState(null);
             onCloseClick={() => setActiveMarker(null)}
           >
             <div>
-              <h3>Информация о первой точке</h3>
+              <img
+                src="https://res.cloudinary.com/dsw7lnmcv/image/upload/v1691147447/photo_5362087646685415699_y_nkgwqu.jpg"
+                style={{ width: '120px', height: '60px' }}
+                alt="entrance"
+              />
             </div>
           </InfoWindow>
         )}
@@ -44,7 +48,11 @@ const [activeMarker, setActiveMarker] = useState(null);
             onCloseClick={() => setActiveMarker(null)}
           >
             <div>
-              <h3>Информация о второй точке</h3>
+             <img
+                src="https://res.cloudinary.com/dsw7lnmcv/image/upload/v1691147447/photo_5359805674726479601_y_kkcwjd.jpg"
+                style={{ width: '120px', height: '60px' }}
+                alt="entrance"
+              />
             </div>
           </InfoWindow>
         )}
